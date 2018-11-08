@@ -1,0 +1,165 @@
+<html>
+
+<head>
+    <style>
+        html {
+            width: 600px;
+            height: 400px;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        span {
+            margin: 0 5 0 5;
+        }
+
+        span:hover {
+            color: black;
+        }
+
+        h2 {
+            font-size: 25px;
+        }
+
+        #shadow {
+            margin-top: 8px;
+            height: 365px;
+            width: 584;
+            top: 0%;
+            opacity: 0;
+            transition: opacity 1s;
+            background-color: rgba(255, 255, 255, 0.5);
+            position: absolute;
+        }
+
+        #img {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 0;
+        }
+
+        #about {
+            width: 584;
+            height: auto;
+            top: 1%;
+            opacity: 0;
+            transition: opacity 1s;
+            position: absolute;
+            font-size: 25px !important;
+            transform: translateY(75%);
+            z-index: -1;
+        }
+
+        #contact {
+            color: black;
+            width: 584;
+            height: auto;
+            top: 1%;
+            opacity: 0;
+            transition: opacity 1s;
+            position: absolute;
+            font-size: 100px;
+            transform: translateY(50%);
+            z-index: -2;
+        }
+
+        #facebook-C,
+        #twitter-C {
+            color: black;
+        }
+
+        #facebook-C:hover {
+            color: #3B5998;
+        }
+
+        #twitter-C:hover {
+            color: #1DA1F2;
+        }
+
+        #glass {
+            width: 584;
+            height: 366px;
+            top: 1%;
+            opacity: 0;
+            transition: opacity 1s;
+            background-color: rgba(255, 255, 255, 0.5);
+            position: absolute;
+        }
+
+        nav {
+            color: grey;
+            text-align: center;
+            padding-top: 5px;
+        }
+    </style>
+    <title>Signature</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <div id="crea" class="container">
+        <img id="img" src="img\full\agent-venom.jpg" />
+        <div id="shadow"></div>
+    </div>
+    <div id="about" class="container">
+        <h2>Qui suis-je ?</h2>
+        <p>Ici j'écris des choses sur moi...</p>
+    </div>
+    <div id="contact" class="container">
+        <h2>Contactez Moi</h2>
+        <a href="http://facebook.com" target="_blank"><span id="facebook-C" class="fa fa-facebook"></span></a>
+        <a href="https://twitter.com" target="_blank"><span id="twitter-C" class='fa fa-twitter'></span></a>
+    </div>
+    <nav id="nav">
+        <span onclick="funcb1" id="b1" class="fa fa-dot-circle-o" aria-hidden="true"></span>
+        <span id="b2" class="fa fa-dot-circle-o" aria-hidden="true"></span>
+        <span id="b3" class="fa fa-dot-circle-o" aria-hidden="true"></span>
+    </nav>
+</body>
+<script type="text/javascript">
+    var script = function() {
+        b1.addEventListener("click", funcb1);
+        b2.addEventListener("click", funcb2);
+        b3.addEventListener("click", funcb3);
+    }
+    window.addEventListener("load", script);
+
+    var b1 = document.getElementById('b1');
+    var b2 = document.getElementById('b2');
+    var about = document.getElementById('about')
+    var b3 = document.getElementById('b3');
+    var contact = document.getElementById('contact');
+    var shadow = document.getElementById('shadow')
+
+    function funcb1() {
+        contact.style.zIndex = "-2";
+        about.style.zIndex = "-1";
+        about.style.opacity = "0";
+        contact.style.opacity = "0";
+        shadow.style.opacity = "0";
+    }
+
+    function funcb2() {
+        contact.style.zIndex = "-2";
+        about.style.zIndex = "1";
+        about.style.opacity = "1";
+        contact.style.opacity = "0";
+        shadow.style.opacity = "0";
+        shadow.style.opacity = "1"
+    }
+
+    function funcb3() {
+        about.style.zIndex = "-1";
+        contact.style.zIndex = "2";
+        about.style.opacity = "0";
+        contact.style.opacity = "1";
+        contact.style.opacity = "1"
+        shadow.style.opacity = "1";
+        shadow.style.opacity = "1"
+    }
+</script>
+
+</html>

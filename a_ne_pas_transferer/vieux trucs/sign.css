@@ -1,0 +1,77 @@
+html {
+  width: 600px;
+  height: 400px;
+  font-family: sans-serif;
+  text-align: center;
+}
+span{
+    margin: 0 5 0 5;
+}
+span:hover {
+  color: black;
+}
+h2 {
+  font-size: 25px;
+}
+#shadow {
+  margin-top: 8px;
+  height: 365px;
+  width: 584;
+  top: 0%;
+  opacity: 0;
+  transition: opacity 1s;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+}
+#img {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+}
+#about {
+  width: 584;
+  height: auto;
+  top: 1%;
+  opacity: 0;
+  transition: opacity 1s;
+  position: absolute;
+  font-size: 25px !important;
+  transform: translateY(75%);
+  z-index: -1;
+}
+#contact {
+  color: black;
+  width: 584;
+  height: auto;
+  top: 1%;
+  opacity: 0;
+  transition: opacity 1s;
+  position: absolute;
+  font-size: 100px;
+  transform: translateY(50%);
+  z-index: -2;
+}
+#facebook-C, #twitter-C {
+  color: black;
+}
+#facebook-C:hover{
+  color:#3B5998;
+}
+#twitter-C:hover{
+  color:#1DA1F2;
+}
+#glass {
+  width: 584;
+  height: 366px;
+  top: 1%;
+  opacity: 0;
+  transition: opacity 1s;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+}
+nav {
+  color: grey;
+  text-align: center;
+  padding-top: 5px;
+}

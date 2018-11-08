@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule (.*)  http://www.justin.mottier.cc%{REQUEST_URI}  [L,R=301]

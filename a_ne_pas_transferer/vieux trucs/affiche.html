@@ -1,0 +1,391 @@
+<html>
+
+<head>
+    <style>
+        html {
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        #corps {
+            width: 1000px;
+            height: 600px;
+            background-color: #dce0df;
+        }
+
+        span {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            position: absolute;
+        }
+
+        div,
+        nav {
+            border-radius: 10px;
+        }
+
+        .navigation p {
+            line-height: 80px;
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .membre_p {
+            background-color: rgba(231, 153, 124, 0.5);
+            opacity: 0;
+            margin: 0;
+            font-size: 30px;
+            line-height: 38px;
+            transition: all 1s;
+        }
+
+        .membre_p:hover {
+            opacity: 1;
+        }
+
+        #gauche {
+            background-color: #E7997C;
+            width: 340px;
+            height: 520px;
+            float: left;
+            margin: 25px;
+            padding: 15px;
+        }
+
+        #fond {
+            z-index: 0;
+            background-image: url(http://img11.hostingpics.net/pics/315125fond3.jpg);
+            /*background-color: #c88268;*/
+            width: 330px;
+            height: 510px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5px;
+        }
+
+        #staff {
+            float: right;
+            width: 500px;
+            height: 170px;
+            background-color: #E7997C;
+            margin: 25px;
+            padding: 15;
+        }
+
+        #bd {
+            float: right;
+            width: 530px;
+            margin: 25px 25px 25px;
+            height: 300px;
+        }
+
+        .membre {
+            background-image: url(http://img15.hostingpics.net/pics/334112fond.jpg);
+            /*background-color: #c88268;*/
+            width: 150px;
+            height: 75px;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        h2 {
+            font-size: 30px;
+            width: 313px;
+        }
+
+        #contact {
+            float: right;
+            width: 250px;
+            display: block;
+            height: 300px;
+        }
+
+        #facebook-C,
+        #twitter-C {
+            color: #E7997C;
+            font-size: 150px;
+            display: block;
+            width: 116px;
+            height: 116px;
+            margin: 17px auto 0 auto;
+            transition: all 2s;
+        }
+
+        #facebook-C:hover {
+            color: #3B5998;
+        }
+
+        #twitter-C:hover {
+            color: #1DA1F2;
+        }
+
+        nav {
+            float: left;
+            width: 250px;
+            height: 270px;
+            background-color: #E7997C;
+            padding: 15;
+        }
+        .navigation {
+            cursor: pointer;
+            background-color: #c88268;
+            width: 240px;
+            height: 80px;
+            display: inline-block;
+            margin: 5px;
+            transition: all 1s;
+        }
+
+        .navigation:hover {
+            background-color: #dce0df;
+        }
+
+        #intro {
+            z-index: 1;
+            opacity: 1;
+            width: 330px;
+            transition: opacity 2s;
+            height: 510px;
+            overflow-y: autoy.filter;
+        }
+
+        #news {
+            z-index: -2;
+            opacity: 0;
+            width: 330px;
+            height: 510px;
+            overflow-y: scroll;
+            transition: opacity 2s;
+        }
+
+        #credit {
+            z-index: -3;
+            opacity: 0;
+            transition: opacity 2s;
+        }
+
+        #intro p,
+        #news p {
+            text-align: justify;
+            padding: 15px;
+            margin: 0;
+        }
+
+        h3 {
+            color: black;
+            margin-bottom: 0;
+        }
+
+        #date {
+            text-align: center;
+            font-size: 10px;
+        }
+
+        #credit div {
+            margin-top: 30px;
+        }
+
+        .img_credit {
+            margin: 0 0 0 20px;
+        }
+
+        .membre_credit {
+            width: 150px;
+            float: right;
+            line-height: 50px;
+            margin: 0 20px 0 0;
+            font-size: 30px;
+        }
+
+        .select {
+            background-color: #dce0df !important;
+        }
+
+        #keylinsky {
+            margin: 0;
+            float: right;
+            cursor: default;
+            opacity: 0;
+            transition: all 2s;
+        }
+
+        #keylinsky:hover {
+            opacity: 1;
+        }
+        .content {
+          opacity: 0;
+          transition: all 1s;
+        }
+        .content:hover {
+          opacity: 1;
+        }
+    </style>
+    <title>Affiche</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <div id="corps">
+        <div id="gauche">
+            <div id="fond">
+                <div id="intro" class="container">
+                        <h2>Qui sommes-nous ?</h2>
+                        <div class="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec quam luctus, pulvinar neque eget, porttitor turpis. Aliquam tristique fermentum imperdiet. Etiam posuere facilisis dui, sed bibendum magna bibendum id. Nam dapibus
+                            pellentesque nibh, eu ornare nisi placerat in. Donec non iaculis purus. Sed dapibus tellus non ipsum sagittis pharetra. Integer venenatis tempor diam, eget varius tortor luctus eget. Sed finibus posuere arcu a aliquam. Morbi
+                            mi orci, pharetra eu iaculis sit amet, rhoncus vel risus.</p>
+                        <p> Quisque vitae commodo orci. Quisque malesuada mattis velit, sed fringilla turpis tincidunt eleifend. Sed sagittis nisi sed tortor molestie, a dignissim augue ultricies.</p>
+                    </div>
+                </div>
+                <div id="news" class="container">
+                    <h2>Quoi de Neuf ?</h2>
+                    <div class="content">
+                        <a href=" " title="Lien vers l'article"><h3>Titre de l'article</h3></a>
+                        <span id="date">25/12/2042</span>
+                        <p>Nam convallis mi ac urna pellentesque, vel egestas arcu lobortis. Mauris ultricies felis dui, eget malesuada nisi porttitor eget. Pellentesque imperdiet nulla hendrerit urna blandit efficitur. Vivamus tortor sem, laoreet eget rutrum
+                            sed, placerat non ipsum. Nulla facilisi. Pellentesque a tellus diam. Etiam ultrices scelerisque quam, sed vestibulum mauris semper sit amet.</p>
+                        <a href=" " title="Lien vers l'article"><h3>Titre de l'article</h3></a>
+                        <span id="date">01/01/2017</span>
+                        <p>Proin vitae varius erat. Duis euismod nisi quam, quis bibendum ante pellentesque id. Proin lacinia congue ullamcorper. Fusce egestas eleifend pharetra. Sed velit metus, lobortis at mi a, lobortis tristique diam. Suspendisse a tincidunt
+                            augue. Ut quis tortor mattis, maximus quam sed, mattis augue. Ut at lectus at libero sagittis porta.</p>
+                        <a href=" " title="Lien vers l'article"><h3>Titre de l'article</h3></a>
+                        <span id="date">14/07/1789</span>
+                        <p>Consectetur adipiscing elit. Duis ornare ullamcorper placerat. Nulla in turpis non tortor mattis mattis in id turpis. Donec pellentesque sollicitudin scelerisque. Suspendisse rhoncus facilisis velit nec tempus.</p>
+                        <a href=" " title="Lien vers l'article"><h3>Titre de l'article</h3></a>
+                        <span id="date">10/09/1515</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed eleifend turpis, et laoreet metus. Mauris bibendum pulvinar felis id tristique. Maecenas vitae libero ac nunc porttitor euismod quis quis lorem.</p>
+                    </div>
+                </div>
+                <div id="credit" class="container">
+                        <h2>Remerciements</h2>
+                        <div class="content">
+                        <div><img src="http://img15.hostingpics.net/pics/176409fond2.jpg" class="img_credit">
+                            <p class="membre_credit">Membre Travail</p>
+                        </div>
+                        <div><img src="http://img15.hostingpics.net/pics/176409fond2.jpg" class="img_credit">
+                            <p class="membre_credit">Membre Travail</p>
+                        </div>
+                        <div><img src="http://img15.hostingpics.net/pics/176409fond2.jpg" class="img_credit">
+                            <p class="membre_credit">Membre Travail</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="staff">
+            <div class="membre">
+                <p class="membre_p">Pseudo Fonction</p>
+            </div>
+            <div class="membre">
+                <p class="membre_p">Pseudo Fonction</p>
+            </div>
+            <div class="membre">
+                <p class="membre_p">Pseudo Fonction</p>
+            </div>
+            <div class="membre">
+                <p class="membre_p">Pseudo Fonction</p>
+            </div>
+            <div class="membre">
+                <p class="membre_p">Pseudo Fonction</p>
+            </div>
+            <div class="membre">
+                <p class="membre_p">Pseudo Fonction</p>
+            </div>
+        </div>
+        <div id="bd">
+            <nav id="nav">
+                <div id="bouton_intro" class="navigation select">
+                    <p>Introduction</p>
+                </div>
+                <div id="bouton_news" class="navigation">
+                    <p>Nouveautés</p>
+                </div>
+                <div id="bouton_credit" class="navigation">
+                    <p>Crédits</p>
+                </div>
+            </nav>
+            <div id="contact">
+                <a href="http://facebook.com" target="_blank"><span id="facebook-C" class="fa fa-facebook"></span></a>
+                <a href="https://twitter.com" target="_blank"><span id="twitter-C" class='fa fa-twitter'></span></a>
+            </div>
+            <p id="keylinsky">Codage réalisé par Keylinsky</p>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript">
+    var i = 2;
+    var bouton_intro = document.getElementById('bouton_intro');
+    var intro = document.getElementById('intro');
+    var bouton_news = document.getElementById('bouton_news');
+    var news = document.getElementById('news');
+    var bouton_credit = document.getElementById('bouton_credit')
+    var credit = document.getElementById('credit');
+
+    var script = function() {
+        var clock = setInterval(func_clock, 60000);
+        bouton_intro.addEventListener("click", func_intro);
+        bouton_news.addEventListener("click", func_news);
+        bouton_credit.addEventListener("click", func_credit);
+    }
+    window.addEventListener("load", script);
+
+    function func_clock() {
+        if (i == 1) {
+            func_intro();
+            i = 2;
+        } else if (i == 2) {
+            func_news();
+            i = 3;
+        } else if (i == 3) {
+            func_credit();
+            i = 1;
+        }
+    }
+
+    function func_intro() {
+        bouton_intro.classList.add("select");
+        bouton_news.classList.remove("select");
+        bouton_credit.classList.remove("select");
+        intro.style.opacity = "1";
+        news.style.opacity = "0";
+        credit.style.opacity = "0";
+        intro.style.zIndex = "1";
+        news.style.zIndex = "-2";
+        credit.style.zIndex = "-3";
+    }
+
+    function func_news() {
+        bouton_intro.classList.remove("select");
+        bouton_news.classList.add("select");
+        bouton_credit.classList.remove("select");
+        intro.style.opacity = "0";
+        news.style.opacity = "1";
+        credit.style.opacity = "0";
+        intro.style.zIndex = "-1";
+        news.style.zIndex = "2";
+        credit.style.zIndex = "-3";
+    }
+
+    function func_credit() {
+        bouton_intro.classList.remove("select");
+        bouton_news.classList.remove("select");
+        bouton_credit.classList.add("select");
+        intro.style.opacity = "0";
+        news.style.opacity = "0";
+        credit.style.opacity = "1";
+        intro.style.zIndex = "-1";
+        news.style.zIndex = "-2";
+        credit.style.zIndex = "3";
+    }
+</script>
+
+</html>

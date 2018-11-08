@@ -1,0 +1,50 @@
+@font-face {
+	font-family: "vcr";
+	src: url('vcr.ttf');
+}
+body{
+  font-family: "vcr", Helvetica, Arial, sans-serif;
+  background-color:#125599;
+  padding-bottom: 50px;
+}
+button {
+  margin: 10px;
+}
+#pane-intro {
+    font-family: "vcr", Helvetica, Arial, sans-serif;
+    background-color:#ffffff;
+    margin-left: auto;
+    margin-right: auto;
+}
+#infos {
+  font-size: 25px;
+  height: 75px;
+}
+#header_container{
+  width: 700px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#header{
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 658px;
+}
+#container-canvas {
+width: 800px;
+margin-left: auto;
+margin-right: auto;
+box-shadow: 25px 21px 0px rgba(0, 0, 0, 0.5);
+}
+#controle {
+  width = 80%;
+  margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#pane{
+  cursor: crosshair;
+  background-color:#ffffff;
+}

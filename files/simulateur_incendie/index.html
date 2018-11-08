@@ -1,0 +1,35 @@
+<html>
+<!-- balise de début de la page HTML -->
+
+<head>
+	<!-- balise de début de l'entête -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<!--les attribus et leurs valeurs indiquent au navigateur le type de codage de caratères à utiliser  -->
+	<title> Titre de la page </title>
+	<!-- place un titre dans l'onglet du navigateur -->
+	<link href="CSS/monFichierCSS.css" type="text/css" rel="stylesheet" media="screen">
+	<!-- permet d'associer à cette page la feuille de style CSS -->
+</head>
+<!-- fin de l'entête -->
+
+<body>
+	<!-- début du corps de la page -->
+	<div id="header_container"><img id="header" src="img/header.png" /></div>
+	<div id="controle">
+		<input id="largeur" type="number" step="10" min="10" placeholder="Largeur de la forêt">
+		<input id="hauteur" type="number" step="10" min="10" placeholder="Hauteur de la forêt">
+		<input id="proba" type="number" step="0.01" min="0" max="1" placeholder="Densité">
+		<input id="temps" type="number" step="0.01" min="0" max="5" placeholder="Durée">
+		<br/>
+		<button id="Binit">initialisation</button>
+		<button id="Bincendie">Départ de feu</button>
+		<p id="infos"></p>
+	</div>
+	<div id="container-canvas"><canvas id='pane-intro' width="800" height="375"></canvas></div>
+</body>
+<!-- fin du corps de la page -->
+<script type="text/javascript" SRC="javascript/script.js"></script>
+<!-- permet d'associer à cette page un programme écrit en javascript -->
+
+</html>
+<!-- fin de la page HTML -->
