@@ -5,6 +5,12 @@ window.onscroll = function() {myFunction()};
 var navbar = document.getElementById("navContainer");
 var img = document.getElementsByTagName("h1")[0];
 
+
+bodyRect = document.body.getBoundingClientRect();
+elemRect = img.getBoundingClientRect();
+offset   = elemRect.top - bodyRect.top;
+console.log(elemRect.top);
+
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
 
