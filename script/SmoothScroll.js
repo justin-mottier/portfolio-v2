@@ -2,26 +2,17 @@ const TIME = 1000;
 const HTML = document.getElementsByTagName("html")[0];
 let step = 10;
 
-let target;
-
-
-
-
-function clickManager() {
-	fetchElements(event);
-	smoothScroll(window.pageYOffset, target-80);
-}
-
-function fetchElements(event) {
-	for (let elem of event.path) {
-		if (elem.tagName == "A") {
-			target = document.getElementById(elem.dataset.goto).offsetTop;
-		}
+async function smoothScroll(event) {
+	let source = window.pageYOffset;
+	let target;
+	if (event.target.tagName != 'A') {
+		console.log(event.target.parentElement.dataset.goto);
+		target = document.getElementById(event.target.parentElement.dataset.goto).offsetTop-80;
+	} else {
+		target = document.getElementById(event.target.dataset.goto).offsetTop-80;
 	}
-}
-
-async function smoothScroll(source, target) {
 	let msToWait = TIME/(Math.abs(source-target)/step);
+
 	if (source > target) {
 		for (let i = source; i > target; i-=step) {
 			HTML.scrollTop = i;

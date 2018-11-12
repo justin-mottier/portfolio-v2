@@ -52,18 +52,18 @@
 	<!--menu -->
 	<div id="navContainer">
 		<nav class="navImage">
-			<a onclick="clickManager()" data-goto="top" class="lienMenu"><img id="imgMenu" src="img/rocket.svg" alt="logo-menu" /></a>
+			<a onclick="smoothScroll(event)" data-goto="top" class="lienMenu"><img id="imgMenu" src="img/rocket.svg" alt="logo-menu" /></a>
 		</nav>
 		<nav class="navTexte">
-			<a onclick="clickManager()" data-goto="about" class="lienMenu">A Propos</a>
-			<a onclick="clickManager()" data-goto="projects" class="lienMenu">Projets</a>
-			<a onclick="clickManager()" data-goto="contact" class="lienMenu">Contact</a>
+			<a onclick="smoothScroll(event)" data-goto="about" class="lienMenu">A Propos</a>
+			<a onclick="smoothScroll(event)" data-goto="projects" class="lienMenu">Projets</a>
+			<a onclick="smoothScroll(event)" data-goto="contact" class="lienMenu">Contact</a>
 		</nav>
 	</div>
 	<!--/menu-->
 	<div class="container firstAndLastContainer">
 		<h2 id="about">Qui Suis-je ?</h2>
-		<p>Je m'appelle Justin Mottier, j'ai 19 ans et je suis actuellement en DUT Informatique. Je fais du graphisme depuis
+		<p>Je m'appelle Justin Mottier, j'ai <span id="ageText"></span> ans et je suis actuellement en DUT Informatique. Je fais du graphisme depuis
 			mes 10 ans et c'est l'une de mes plus grandes passions.</p>
 		<p>Ce site est avant tout mon portfolio, c'est à dire là où je poste toutes les créations que j'estime dignes
 			d'interet. Avec le temps, je me suis assez diversifié, puisque j'ai déja expérimenté les créations grpahiques,
@@ -109,9 +109,10 @@
 		</div>
 	</div>
 	<!--Formulaire-->
-	<script src="script/TilesTab.js"></script>
 	<script src="script/stickyNav.js"></script>
 	<script src="script/SmoothScroll.js"></script>
+	<script src="script/updateContent.js"></script>
+	<script src="script/TilesTab.js"></script>
 	<!--Script Pop-Up-->
 </body>
 
