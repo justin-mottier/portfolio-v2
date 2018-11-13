@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 08/11/2018 01:25
+  	Creation date: 13/11/2018 19:25
   	*/
 
 @font-face {
@@ -24,12 +24,17 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
   font-family: Flaticon;
-        font-size: 120px;
 font-style: normal;
-margin-left: 120px;
 }
 
 .flaticon-cv-file-interface-symbol:before { content: "\f100"; }
 .flaticon-deviantart:before { content: "\f101"; }
 .flaticon-linkedin-logo:before { content: "\f102"; }
 .flaticon-sent-mail:before { content: "\f103"; }
+.flaticon-next:before { content: "\f104"; }
+.flaticon-back:before { content: "\f105"; }
+.flaticon-cancel:before { content: "\f106"; }
+.flaticon-graduate-cap:before { content: "\f107"; }
+.flaticon-portfolio:before { content: "\f108"; }
+.flaticon-chef:before { content: "\f109"; }
+.flaticon-stretcher:before { content: "\f10a"; }

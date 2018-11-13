@@ -139,7 +139,7 @@ function resize() {
 		if (width > height) { //si paysage
 			content.style.maxWidth = '75vw';
 			content.style.height = 'auto';
-			
+
 		} else { //si portrait ou carré
 			content.style.maxHeight = '75vh';
 			content.style.width = 'auto';
@@ -151,3 +151,4 @@ function main() {
 	fetchContent();
 	setEvents();
 }
+window.onload = main;

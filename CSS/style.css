@@ -7,6 +7,7 @@ body {
     background-color: #1E3D52;
     color: white;
     font-family: 'Raleway', sans-serif;
+	text-align: justify;
 }
 
 a {
@@ -26,8 +27,7 @@ h3 {
 }
 
 h4 {
-    padding: 5px;
-    margin: 0;
+    margin: 5px 5px 0 5px;
     font-size: 1.5em;
 }
 
@@ -283,6 +283,21 @@ header {
   background-color: #3e8092;
   position: relative;
   border-radius: 6px;
+}
+
+.timelineIcons::before {
+	margin-right: 15px;
+}
+
+.timeline p {
+	font-size: 1em;
+    line-height: 1.5;
+	margin: 0;
+}
+
+.timelineDetails {
+	font-style: italic;
+	text-align: center;
 }
 
 #contactIconsContainer a {
