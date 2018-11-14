@@ -1,10 +1,14 @@
-.button, #navContainer, .container:nth-child(even) {
-    background-color: #3e8092;
+html {
+	--fond-prim : #202024;
+	--fond-sec : #2c2c32;
+	--primary : #F5CE7B;
+	--secondary : #3e8092;
+	--title-color: hsla(41, 86%, 75%, 1);
 }
 
 body {
     margin: 0;
-    background-color: #1E3D52;
+    background-color: var(--fond-prim);
     color: white;
     font-family: 'Raleway', sans-serif;
 	text-align: justify;
@@ -33,7 +37,7 @@ h4 {
 
 h1 {
     width: 99%;
-    color: hsla(41, 86%, 75%, 1);
+    color: var(--title-color);
     text-shadow: 3px 3px 0 #502119, 3px 0 0 #502119, 0 0 8px #0000009e;
     text-align: center;
     font-size: 7em;
@@ -65,7 +69,7 @@ h2, h3, h4 {
 
 #top h2 {
 	width: 99%;
-	color: hsla(41, 86%, 75%, 1);
+	color: var(--title-color);
 	text-shadow: 3px 3px 0 #502119, 3px 0 0 #502119, 0 0 8px #0000009e;
 	text-align: center;
 	font-size: 3.75em;
@@ -77,7 +81,7 @@ h2, h3, h4 {
 }
 
 p {
-    margin: 10px 10px 10px 10px;
+    margin: 10px 0;
     line-height: 30px;
     font-size: 125%;
     text-align: justify;
@@ -98,18 +102,19 @@ header {
 }
 
 .button {
+	background-color: var(--fond-sec);
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
     outline: none;
     padding: 5px;
     transition: all 0.5s;
-    border: #F5CE7B 2px solid;
-    color: #F5CE7B;
+    border: var(--primary) 2px solid;
+    color: var(--primary);
 }
 
 .button:hover {
     padding: 5px;
-    background-color: #F5CE7B;
+    background-color: var(--primary);
     color: white;
 }
 
@@ -135,11 +140,12 @@ header {
 }
 
 #navContainer {
+	background-color: var(--fond-sec);
     z-index: 25;
     display: flex;
     font-size: 20px;
     font-family: 'Josefin Slab', serif;
-    border-bottom: 2px solid #F5CE7B;
+    border-bottom: 2px solid var(--primary);
 }
 
 .navImage {
@@ -156,9 +162,12 @@ header {
 }
 
 .container {
-    /*margin: 50px 0;*/
     padding: 50px;
     overflow: auto;
+}
+
+.container:nth-child(even) {
+	background-color: var(--fond-sec);
 }
 
 .firstAndLastContainer {
@@ -174,7 +183,7 @@ header {
 }
 
 .lienMenu:hover {
-    background-color: #F5CE7B;
+    background-color: var(--primary);
     color: black;
 }
 
@@ -216,11 +225,11 @@ header {
   content: '';
   position: absolute;
   width: 6px;
-  background-color: #3e8092;
   top: 0;
   bottom: 0;
   left: 50%;
   margin-left: -3px;
+	background-color: var(--secondary);
 }
 
 /* Container around content */
@@ -238,11 +247,11 @@ header {
   width: 25px;
   height: 25px;
   right: -17px;
-  background-color: #3e8092;
-  border: 4px solid #f5ce7b;
+  border: 4px solid var(--primary);
   top: 15px;
   border-radius: 50%;
   z-index: 1;
+	background-color: var(--secondary);
 }
 
 /* Place the container to the left */
@@ -266,7 +275,7 @@ header {
   right: 30px;
   border: solid;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #3e8092;
+  border-color: transparent transparent transparent var(--secondary);
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -280,7 +289,7 @@ header {
   left: 30px;
   border: solid;
   border-width: 10px 10px 10px 0;
-  border-color: transparent #3e8092 transparent transparent;
+  border-color: transparent var(--secondary) transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -291,9 +300,9 @@ header {
 /* The actual content */
 .timelineContent {
   padding: 20px 30px;
-  background-color: #3e8092;
   position: relative;
   border-radius: 6px;
+	background-color: var(--secondary);
 }
 
 .timelineIcons::before {
@@ -306,9 +315,38 @@ header {
 	margin: 0;
 }
 
-.timelineDetails {
-	font-style: italic;
+.timeline ul {
+	font-size: 12px;
+	padding: 0;
+	margin-bottom: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.timeline li {
+	background: #40484D;
+	border-radius: 2px;
+	display: inline-block;
+	padding: 2px 10px;
+	color: rgba(255, 255, 255, 0.7);
+	margin: 3px 2px;
 	text-align: center;
+	flex-grow: 1;
+}
+
+.timelineDetails {
+	background: #264e59;
+	padding: 5px 10px;
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 12px;
+	box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.08);
+	border-radius: 2px;
+}
+
+.timelineDetailsInfo, .timelineDetailsPlace {
+	width: calc(50% - 2px);
+	display: inline-block;
 }
 
 #contactIconsContainer a {
@@ -323,15 +361,16 @@ header {
     float: right;
     margin: 10px;
     cursor: pointer;
-    transition: all 0.5s;
     padding: 5px;
     border-radius: 5px;
 	font-size: 50px;
-	color: #f5cd7b;
+	color: var(--primary);
+	transition: none;
 }
 
 #cross:hover {
-    background-color: #F5CE7B;
+    transform: rotate(360deg);
+	transition: 1s;
 }
 
 #deviant-C::before {
@@ -362,7 +401,7 @@ header {
 
 .img-contact {
     font-size: 150px;
-    color: #F5CE7B;
+    color: var(--primary);
     transition-property: all;
     transition-duration: 1s;
     transition-timing-function: ease-out;
@@ -387,7 +426,7 @@ header {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.8);
-    z-index: 2;
+    z-index: 50;
 }
 
 .sideText {
@@ -415,7 +454,11 @@ header {
     height: max-content;
     margin: auto;
     cursor: pointer;
-	color: #f5cd7b;
+	color: var(--primary);
+}
+
+.arrow:hover {
+	animation: bounce 1s;
 }
 
 #insideOverlay {
@@ -499,6 +542,7 @@ header {
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
+	  background-color: var(--secondary);
   }
 
 /* Make sure that all arrows are pointing leftwards */
@@ -506,7 +550,7 @@ header {
     left: 60px;
     border: solid;
     border-width: 10px 10px 10px 0;
-    border-color: transparent #3e8092 transparent transparent;
+    border-color: transparent var(--secondary) transparent transparent;
   }
 
 /* Make sure all circles are at the same spot */

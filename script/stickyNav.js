@@ -1,7 +1,6 @@
 // A chaque scoll, execute classManager()
-window.onscroll = function() {
-	classManager()
-};
+window.onscroll = classManager;
+window.onresize = classManager;
 
 const NAVBAR = document.getElementById("navContainer"); //navbar
 const NAVBAR_TOP = NAVBAR.offsetTop; //distance entre haut de la page et le haut de NAVBAR
