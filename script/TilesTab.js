@@ -36,12 +36,22 @@ function show() {
 	} else if (this.dataset.type === 'video') {
 		div.innerHTML = createIFrame('currentDisplay', null, this.dataset.full).outerHTML;
 	}
-	document.getElementById('insideOverlay').innerHTML = createImg('arrowPrev', 'arrow', 'img/icons/prev.png').outerHTML + div.outerHTML + createImg('arrowNext', 'arrow', 'img/icons/next.png').outerHTML;
+	document.getElementById('insideOverlay').innerHTML = createSpan('arrowPrev', 'arrow flaticon-back').outerHTML + div.outerHTML + createSpan('arrowNext', 'arrow flaticon-next').outerHTML;
 	overlay.style.display = 'block';
 	resize();
 	document.getElementById('arrowPrev').addEventListener('click', clickArrowP);
 	document.getElementById('arrowNext').addEventListener('click', clickArrowN);
 	window.addEventListener("keydown", handleKey);
+}function createSpan(id, classe) {
+	let span = document.createElement('img');
+	if (id) {
+		span.id = id;
+	}
+	if (classe) {
+		span.className = classe;
+	}
+	span.src = src;
+	return span;
 }
 
 function clickArrowP() {
@@ -81,6 +91,17 @@ function createImg(id, classe, src) {
 	}
 	img.src = src;
 	return img;
+}
+
+function createSpan(id, classe) {
+	let span = document.createElement('span');
+	if (id) {
+		span.id = id;
+	}
+	if (classe) {
+		span.className = classe;
+	}
+	return span;
 }
 
 function createIFrame(id, classe, src) {

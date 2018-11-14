@@ -34,7 +34,7 @@ h4 {
 h1 {
     width: 99%;
     color: hsla(41, 86%, 75%, 1);
-    text-shadow: 3px 3px 0px #502119, 3px 0px 0px #502119, 0px 0px 8px #0000009e;
+    text-shadow: 3px 3px 0 #502119, 3px 0 0 #502119, 0 0 8px #0000009e;
     text-align: center;
     font-size: 7em;
     font-family: 'Satisfy', cursive;
@@ -43,7 +43,7 @@ h1 {
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
-    transition: text-shadow 1s;
+	z-index: 1;
 }
 
 h1.sticky {
@@ -63,6 +63,19 @@ h2, h3, h4 {
     text-align: center;
 }
 
+#top h2 {
+	width: 99%;
+	color: hsla(41, 86%, 75%, 1);
+	text-shadow: 3px 3px 0 #502119, 3px 0 0 #502119, 0 0 8px #0000009e;
+	text-align: center;
+	font-size: 3.75em;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	margin: 1.75em 0 0 0;
+}
+
 p {
     margin: 10px 10px 10px 10px;
     line-height: 30px;
@@ -72,10 +85,8 @@ p {
 
 header {
     height: 100vh;
-    background: url(../img/background.svg);
-    background: linear-gradient(135deg, rgba(254, 213, 136, 0.3), rgba(253, 120, 123, 0.3)), url(../img/background.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
+	background: linear-gradient(135deg, rgba(254, 213, 136, 0.3), rgba(253, 120, 123, 0.3)), url(../img/background.svg), no-repeat;
+	background-size: cover;
     position: relative;
 }
 
@@ -253,7 +264,7 @@ header {
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid #3e8092;
+  border: solid;
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent #3e8092;
 }
@@ -267,7 +278,7 @@ header {
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid #3e8092;
+  border: solid;
   border-width: 10px 10px 10px 0;
   border-color: transparent #3e8092 transparent transparent;
 }
@@ -315,6 +326,8 @@ header {
     transition: all 0.5s;
     padding: 5px;
     border-radius: 5px;
+	font-size: 50px;
+	color: #f5cd7b;
 }
 
 #cross:hover {
@@ -369,7 +382,6 @@ header {
     display: none;
     width: 100%;
     height: 100%;
-    height: 100%;
     top: 0;
     left: 0;
     right: 0;
@@ -399,9 +411,11 @@ header {
 }
 
 .arrow {
+    font-size: 100px;
     height: max-content;
     margin: auto;
     cursor: pointer;
+	color: #f5cd7b;
 }
 
 #insideOverlay {
@@ -490,19 +504,19 @@ header {
 /* Make sure that all arrows are pointing leftwards */
   .timelineContainer::before {
     left: 60px;
-    border: medium solid white;
+    border: solid;
     border-width: 10px 10px 10px 0;
     border-color: transparent #3e8092 transparent transparent;
   }
 
 /* Make sure all circles are at the same spot */
   .left::after, .right::after {
-    left: 0px;
+    left: 0;
   }
 
 /* Make all right containers behave like the left ones */
   .right {
-    left: 0%;
+    left: 0;
   }
 }
 
