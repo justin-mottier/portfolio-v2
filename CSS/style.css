@@ -325,20 +325,20 @@ header {
 }
 
 .timeline li {
-	background: #40484D;
+	background: var(--primary);
 	border-radius: 2px;
 	display: inline-block;
 	padding: 2px 10px;
-	color: rgba(255, 255, 255, 0.7);
+	color: var(--fond-sec);
 	margin: 3px 2px;
 	text-align: center;
 	flex-grow: 1;
 }
 
 .timelineDetails {
-	background: #264e59;
+	background: var(--primary);
 	padding: 5px 10px;
-	color: rgba(255, 255, 255, 0.7);
+	color: var(--fond-sec);
 	font-size: 12px;
 	box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.08);
 	border-radius: 2px;
@@ -347,6 +347,10 @@ header {
 .timelineDetailsInfo, .timelineDetailsPlace {
 	width: calc(50% - 2px);
 	display: inline-block;
+}
+
+.timeline ul + ul {
+	margin: 0;
 }
 
 #contactIconsContainer a {
@@ -378,19 +382,19 @@ header {
     margin-right: 36px;
 }
 
-#deviant-C:hover {
+#deviant-C:hover:before {
     color: #05CC47;
 }
 
-#linkedin-C:hover {
+#linkedin-C:hover:before {
     color: #0077B5;
 }
 
-#cv-C:hover {
+#cv-C:hover:before {
     color: #a03434;
 }
 
-#mail-C:hover {
+#mail-C:hover:before {
     color: #fcff3d;
 }
 
@@ -399,7 +403,8 @@ header {
     margin: auto;
 }
 
-.img-contact {
+.img-contact:before {
+    margin: 0 60px;
     font-size: 150px;
     color: var(--primary);
     transition-property: all;
@@ -410,10 +415,6 @@ header {
 
 .img-contact:hover {
     text-shadow: -1px -1px #000, 1px 1px #000, -1px 1px #000, 1px -1px #000;
-}
-
-.img-contact:before {
-    margin: 0 60px;
 }
 
 #overlay {

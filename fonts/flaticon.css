@@ -1,15 +1,15 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 13/11/2018 19:25
+  	Creation date: 15/11/2018 13:14
   	*/
 
 @font-face {
   font-family: "Flaticon";
-  src: url("./Flaticon.eot?v=1");
-  src: url("./Flaticon.eot?#iefix?v=1") format("embedded-opentype"),
-       url("./Flaticon.woff?v=1") format("woff"),
-       url("./Flaticon.ttf?v=1") format("truetype"),
-       url("./Flaticon.svg#Flaticon?v=1") format("svg");
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -22,19 +22,23 @@
 }
 
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
   font-family: Flaticon;
 font-style: normal;
+margin-left: 20px;
 }
 
 .flaticon-cv-file-interface-symbol:before { content: "\f100"; }
 .flaticon-deviantart:before { content: "\f101"; }
 .flaticon-linkedin-logo:before { content: "\f102"; }
-.flaticon-sent-mail:before { content: "\f103"; }
+.flaticon-at:before { content: "\f103"; }
 .flaticon-next:before { content: "\f104"; }
 .flaticon-back:before { content: "\f105"; }
 .flaticon-cancel:before { content: "\f106"; }
 .flaticon-graduate-cap:before { content: "\f107"; }
-.flaticon-portfolio:before { content: "\f108"; }
+.flaticon-old-fashion-briefcase:before { content: "\f108"; }
 .flaticon-chef:before { content: "\f109"; }
 .flaticon-stretcher:before { content: "\f10a"; }
+.flaticon-computer-graphic:before { content: "\f10b"; }
+.flaticon-placeholder-filled-tool-shape-for-maps:before { content: "\f10c"; }
+.flaticon-calendar:before { content: "\f10d"; }
