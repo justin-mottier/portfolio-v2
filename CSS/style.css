@@ -342,11 +342,17 @@ header {
 	font-size: 12px;
 	box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.08);
 	border-radius: 2px;
+	margin: 5px 0;
 }
 
-.timelineDetailsInfo, .timelineDetailsPlace {
+
+.timelineDetailsDate, .timelineDetailsPlace {
 	width: calc(50% - 2px);
 	display: inline-block;
+}
+
+.timelineDetails [class^="flaticon-"]:before, .timelineDetails [class*=" flaticon-"]:before {
+	margin: 0 5px;
 }
 
 .timeline ul + ul {
