@@ -26,17 +26,17 @@
 	    font-style: normal;
 	}
 
-.flaticon-cv-file-interface-symbol:before { content: "\f100"; }
-.flaticon-deviantart:before { content: "\f101"; }
-.flaticon-linkedin-logo:before { content: "\f102"; }
-.flaticon-at:before { content: "\f103"; }
-.flaticon-next:before { content: "\f104"; }
-.flaticon-back:before { content: "\f105"; }
-.flaticon-cancel:before { content: "\f106"; }
-.flaticon-graduate-cap:before { content: "\f107"; }
-.flaticon-old-fashion-briefcase:before { content: "\f108"; }
-.flaticon-chef:before { content: "\f109"; }
-.flaticon-stretcher:before { content: "\f10a"; }
-.flaticon-computer-graphic:before { content: "\f10b"; }
-.flaticon-placeholder-filled-tool-shape-for-maps:before { content: "\f10c"; }
-.flaticon-calendar:before { content: "\f10d"; }
+	.flaticon-cv-file-interface-symbol:before { content: "\f100"; }
+	.flaticon-deviantart:before { content: "\f101"; }
+	.flaticon-linkedin-logo:before { content: "\f102"; }
+	.flaticon-next:before { content: "\f103"; }
+	.flaticon-back:before { content: "\f104"; }
+	.flaticon-cancel:before { content: "\f105"; }
+	.flaticon-graduate-cap:before { content: "\f106"; }
+	.flaticon-portfolio:before { content: "\f107"; }
+	.flaticon-chef:before { content: "\f108"; }
+	.flaticon-stretcher:before { content: "\f109"; }
+	.flaticon-at:before { content: "\f10a"; }
+	.flaticon-vector:before { content: "\f10b"; }
+	.flaticon-placeholder-filled-point:before { content: "\f10c"; }
+	.flaticon-calendar:before { content: "\f10d"; }

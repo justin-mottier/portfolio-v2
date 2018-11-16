@@ -35,6 +35,11 @@ h4 {
     font-size: 1.5em;
 }
 
+h5 {
+	font-size: 1em;
+    margin: 5px 0;
+}
+
 h1 {
     width: 99%;
     color: var(--title-color);
@@ -62,7 +67,7 @@ h1.sticky {
     transform: translate(-50%, 0);
 }
 
-h2, h3, h4 {
+h2, h3, h4, h5 {
     font-family: 'Josefin Slab', serif;
     text-align: center;
 }
@@ -162,7 +167,7 @@ header {
 }
 
 .container {
-    padding: 50px;
+    padding: 50px 90px;
     overflow: auto;
 }
 
@@ -207,6 +212,15 @@ header {
     padding: 10px;
     box-sizing: border-box;
     cursor: pointer;
+}
+
+#parcours {
+	border-style: solid;
+border-color: transparent transparent #3e8092;
+border-spacing: 10px;
+width: 25%;
+margin: 0 auto;
+
 }
 
 .timeline * {
