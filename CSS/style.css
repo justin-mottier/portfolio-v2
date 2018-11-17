@@ -1,9 +1,9 @@
 html {
-	--fond-prim : #202024;
-	--fond-sec : #2c2c32;
-	--primary : #F5CE7B;
-	--secondary : #3e8092;
-	--title-color: hsla(41, 86%, 75%, 1);
+    --fond-prim: #202024;
+    --fond-sec: #2c2c32;
+    --primary: #F5CE7B;
+    --secondary: #3e8092;
+    --title-color: hsla(41, 86%, 75%, 1);
 }
 
 body {
@@ -11,11 +11,11 @@ body {
     background-color: var(--fond-prim);
     color: white;
     font-family: 'Raleway', sans-serif;
-	text-align: justify;
+    text-align: justify;
 }
 
 a {
-	cursor: pointer;
+    cursor: pointer;
     color: white;
     text-decoration: none;
 }
@@ -36,7 +36,7 @@ h4 {
 }
 
 h5 {
-	font-size: 1em;
+    font-size: 1em;
     margin: 5px 0;
 }
 
@@ -52,7 +52,7 @@ h1 {
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
-	z-index: 1;
+    z-index: 1;
 }
 
 h1.sticky {
@@ -73,16 +73,16 @@ h2, h3, h4, h5 {
 }
 
 #top h2 {
-	width: 99%;
-	color: var(--title-color);
-	text-shadow: 3px 3px 0 #502119, 3px 0 0 #502119, 0 0 8px #0000009e;
-	text-align: center;
-	font-size: 3.75em;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	margin: 1.75em 0 0 0;
+    width: 99%;
+    color: var(--title-color);
+    text-shadow: 3px 3px 0 #502119, 3px 0 0 #502119, 0 0 8px #0000009e;
+    text-align: center;
+    font-size: 3.75em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin: 1.75em 0 0 0;
 }
 
 p {
@@ -94,8 +94,8 @@ p {
 
 header {
     height: 100vh;
-	background: linear-gradient(135deg, rgba(254, 213, 136, 0.3), rgba(253, 120, 123, 0.3)), url(../img/background.svg), no-repeat;
-	background-size: cover;
+    background: linear-gradient(135deg, rgba(254, 213, 136, 0.3), rgba(253, 120, 123, 0.3)), url(../img/background.svg), no-repeat;
+    background-size: cover;
     position: relative;
 }
 
@@ -107,7 +107,7 @@ header {
 }
 
 .button {
-	background-color: var(--fond-sec);
+    background-color: var(--fond-sec);
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
     outline: none;
@@ -145,7 +145,7 @@ header {
 }
 
 #navContainer {
-	background-color: var(--fond-sec);
+    background-color: var(--fond-sec);
     z-index: 25;
     display: flex;
     font-size: 20px;
@@ -172,7 +172,7 @@ header {
 }
 
 .container:nth-child(even) {
-	background-color: var(--fond-sec);
+    background-color: var(--fond-sec);
 }
 
 .firstAndLastContainer {
@@ -180,12 +180,12 @@ header {
 }
 
 .lienMenu {
-	padding: 5px 40px;
-	height: 40px;
-	display: inline-flex;
-	transition: all 1s;
-	line-height: 40px;
-	font-size: 1.25em;
+    padding: 5px 40px;
+    height: 40px;
+    display: inline-flex;
+    transition: all 1s;
+    line-height: 40px;
+    font-size: 1.25em;
 }
 
 .lienMenu:hover {
@@ -216,175 +216,173 @@ header {
 }
 
 #parcours {
-	border-style: solid;
-border-color: transparent transparent #3e8092;
-border-spacing: 10px;
-width: 25%;
-margin: 0 auto;
-
+    border-style: solid;
+    border-color: transparent transparent #3e8092;
+    border-spacing: 10px;
+    width: 25%;
+    margin: 0 auto;
 }
 
 .timeline * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* The actual timeline (the vertical ruler) */
 .timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
-	background-color: var(--secondary);
+    content: '';
+    position: absolute;
+    width: 6px;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    background-color: var(--secondary);
 }
 
 /* Container around content */
 .timelineContainer {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
 }
 
 /* The circles on the timeline */
 .timelineContainer::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  border: 4px solid var(--primary);
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-	background-color: var(--secondary);
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    border: 4px solid var(--primary);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    background-color: var(--secondary);
 }
 
 /* Place the container to the left */
 .left {
-  left: 0;
+    left: 0;
 }
 
 /* Place the container to the right */
 .right {
-  left: 50%;
+    left: 50%;
 }
 
 /* Add arrows to the left container (pointing right) */
 .left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: solid;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent var(--secondary);
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--secondary);
 }
 
 /* Add arrows to the right container (pointing left) */
 .right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: solid;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent var(--secondary) transparent transparent;
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--secondary) transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
 .right::after {
-  left: -16px;
+    left: -16px;
 }
 
 /* The actual content */
 .timelineContent {
-  padding: 20px 30px;
-  position: relative;
-  border-radius: 6px;
-	background-color: var(--secondary);
+    padding: 20px 30px;
+    position: relative;
+    border-radius: 6px;
+    background-color: var(--secondary);
 }
 
 .timelineIcons::before {
-	margin-right: 15px;
+    margin-right: 15px;
 }
 
 .timeline p {
-	font-size: 1em;
+    font-size: 1em;
     line-height: 1.5;
-	margin: 0;
+    margin: 0;
 }
 
 .timeline ul {
-	font-size: 12px;
-	padding: 0;
-	margin-bottom: 0;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+    font-size: 12px;
+    padding: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .timeline li {
-	background: var(--primary);
-	border-radius: 2px;
-	display: inline-block;
-	padding: 2px 10px;
-	color: var(--fond-sec);
-	margin: 3px 2px;
-	text-align: center;
-	flex-grow: 1;
+    background: var(--primary);
+    border-radius: 2px;
+    display: inline-block;
+    padding: 2px 10px;
+    color: var(--fond-sec);
+    margin: 3px 2px;
+    text-align: center;
+    flex-grow: 1;
 }
 
 .timelineDetails {
-	background: var(--primary);
-	padding: 5px 10px;
-	color: var(--fond-sec);
-	font-size: 12px;
-	box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.08);
-	border-radius: 2px;
-	margin: 5px 0;
+    background: var(--primary);
+    padding: 5px 10px;
+    color: var(--fond-sec);
+    font-size: 12px;
+    box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    margin: 5px 0;
 }
 
-
 .timelineDetailsDate, .timelineDetailsPlace {
-	width: calc(50% - 2px);
-	display: inline-block;
+    width: calc(50% - 2px);
+    display: inline-block;
 }
 
 .timelineDetails [class^="flaticon-"]:before, .timelineDetails [class*=" flaticon-"]:before {
-	margin: 0 5px;
+    margin: 0 5px;
 }
 
-.timeline ul + ul {
-	margin: 0;
+.timeline ul+ul {
+    margin: 0;
 }
 
-#hobbies > div {
-	padding: 0 20px;
-	width: calc(100% / 3);
-	box-sizing: border-box;
+#hobbies>div {
+    padding: 0 20px;
+    width: calc(100% / 3);
+    box-sizing: border-box;
 }
 
 #hobbies [class^="flaticon-"], #hobbies [class*=" flaticon-"] {
-	width: 100px;
-	margin: 0 auto;
-	font-size: 100px;
-	color: var(--secondary);
+    width: 100px;
+    margin: 0 auto;
+    font-size: 100px;
+    color: var(--secondary);
 }
 
 #contactIconsContainer a {
@@ -396,19 +394,21 @@ margin: 0 auto;
 }
 
 #cross {
-    float: right;
     margin: 10px;
     cursor: pointer;
     padding: 5px;
     border-radius: 5px;
-	font-size: 50px;
-	color: var(--primary);
-	transition: none;
+    font-size: 50px;
+    color: var(--primary);
+    transition: none;
+    position: absolute;
+    left: 85%;
+	z-index: 51;
 }
 
 #cross:hover {
     transform: rotate(360deg);
-	transition: 1s;
+    transition: 1s;
 }
 
 #deviant-C::before {
@@ -489,11 +489,11 @@ margin: 0 auto;
     height: max-content;
     margin: auto;
     cursor: pointer;
-	color: var(--primary);
+    color: var(--primary);
 }
 
 .arrow:hover {
-	animation: bounce 1s;
+    animation: bounce 1s;
 }
 
 #insideOverlay {
@@ -502,67 +502,90 @@ margin: 0 auto;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
+    width: 100vw;
 }
 
 @media screen and (min-width: 639px) and (max-width: 1079px) {
-	h1.sticky {
-		display: none;
-	}
+    h1.sticky {
+        display: none;
+    }
 
     #contactContainer {
         display: block;
     }
-	.lienMenu {
-		padding: 5px 30px;
-	}
-	.imgContainer {
-		width: calc(100%/3);
+
+    .lienMenu {
+        padding: 5px 30px;
+    }
+
+	.container {
+		padding: 50px 25px;
 	}
 
-	#contactIconsContainer a {
-	    width: calc(100%/2);
-	}
+    .imgContainer {
+        width: calc(100%/3);
+    }
+
+    #contactIconsContainer a {
+        width: calc(100%/2);
+    }
 
     #insideOverlay {
         display: grid;
     }
+
+	#hobbies > div {
+		width: 100%;
+	}
+	.left {
+		padding: 10px 40px 0px 0;
+	}
+	.right {
+		padding: 10px 0 0px 40px;
+	}
 }
 
 @media screen and (max-width: 639px) {
-	h1 {
-		font-size: 4.6em;
-	}
+    h1 {
+        font-size: 4.6em;
+        position: static;
+        transform: translate(0, 50%);
+    }
 
-	#top h2 {
-		font-size: 2.55em;
-	}
+    #top h2 {
+        font-size: 2.55em;
+    }
 
-	h1.sticky {
-		display: none;
-	}
+    h1.sticky {
+        display: none;
+    }
+
     #header {
         width: 95%;
     }
 
     .navImage {
-		display: none;
+        display: none;
         width: 0;
     }
 
-	.navTexte {
-		text-align: center;
-	}
+    .navTexte {
+        text-align: center;
+        display: flex;
+    }
 
-	.lienMenu {
-		width: calc(100%/3);
-	}
+    .lienMenu {
+        width: calc(100%/3);
+        padding: 5px 0;
+        display: block;
+    }
 
     .imgContainer {
         width: calc(100% / 2);
     }
 
     .container {
-        padding: 25px;
+        padding: 15px;
     }
 
     #fullsize_container {
@@ -571,44 +594,53 @@ margin: 0 auto;
         z-index: 1000;
     }
 
-	#contactIconsContainer a {
-	    width: calc(100%/1);
-	}
+    #contactIconsContainer a {
+        width: calc(100%/1);
+        margin: 10px 0;
+    }
 
     #insideOverlay {
         display: grid;
     }
 
-	/* Place the timelime to the left */
-  .timeline::after {
-    left: 41px;
-  }
+    #parcours {
+        border: none;
+        width: 100%;
+    }
 
-/* Full-width containers */
-  .timelineContainer {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-	  background-color: var(--secondary);
-  }
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 41px;
+    }
 
-/* Make sure that all arrows are pointing leftwards */
-  .timelineContainer::before {
-    left: 60px;
-    border: solid;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent var(--secondary) transparent transparent;
-  }
+    /* Full-width containers */
+    .timelineContainer {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
 
-/* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-    left: 0;
-  }
+    /* Make sure that all arrows are pointing leftwards */
+    .timelineContainer::before {
+        left: 60px;
+        border: solid;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--secondary) transparent transparent;
+    }
 
-/* Make all right containers behave like the left ones */
-  .right {
-    left: 0;
-  }
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+        left: 25px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0;
+    }
+
+    #hobbies>div {
+        width: 100%;
+    }
 }
 
 @keyframes bounce {
@@ -618,8 +650,8 @@ margin: 0 auto;
     }
 
     20% {
-		padding-top:
-        -webkit-transform: translateY(-10px);
+        padding-top:
+            -webkit-transform: translateY(-10px);
         transform: translateY(-10px);
     }
 }
