@@ -19,8 +19,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Raleway" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="fonts/flaticon.css?v=3">
-	<link href="./CSS/style.css?v=3" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="fonts/flaticon.css?v=4">
+	<link href="./CSS/style.css?v=4" rel="stylesheet" type="text/css"/>
 	<title>Portfolio de Justin Mottier</title>
 	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 	<!--Script Google Analytics-->
@@ -56,13 +56,13 @@
 <!--menu -->
 <div id="navContainer">
 	<nav class="navImage">
-		<a onclick="smoothScroll(event)" data-goto="top" class="lienMenu"><img id="imgMenu" src="img/rocket.svg"
-																			   alt="logo-menu"/></a>
+		<a onclick="smoothScroll(event)" href="#top" class="lienMenu"><img id="imgMenu" src="img/rocket.svg"
+																		   alt="logo-menu"/></a>
 	</nav>
 	<nav class="navTexte">
-		<a onclick="smoothScroll(event)" data-goto="about" class="lienMenu">A Propos</a>
-		<a onclick="smoothScroll(event)" data-goto="projects" class="lienMenu">Projets</a>
-		<a onclick="smoothScroll(event)" data-goto="contact" class="lienMenu">Contact</a>
+		<a onclick="smoothScroll(event)" href="#about" class="lienMenu">A Propos</a>
+		<a onclick="smoothScroll(event)" href="#projects" class="lienMenu">Projets</a>
+		<a onclick="smoothScroll(event)" href="#contact" class="lienMenu">Contact</a>
 	</nav>
 </div>
 <!--/menu-->
@@ -72,10 +72,10 @@
 		année de DUT Informatique.</p>
 	<p>A travers cette formation, j'ai pu expérimenter toute sorte de domaines informatiques, du développement web à la
 		gestion de réseaux.</p>
-	<p>Ce site est avant tout mon portfolio. Vous y trouverez des informations sur mon parcours et mes projets, ainsi que mes
+	<p>Ce site est avant tout mon portfolio. Vous y trouverez des informations sur mon parcours et mes projets, ainsi
+		que mes
 		compétences et mes passions.</p>
-	<p>Pour avoir un résumé de toutes ces infos, mon <a class="button" href="files/CV_Justin_Mottier.pdf"
-														download="CV_Justin_MOTTIER">CV</a> est à votre disposition.</p>
+	<p>Pour avoir un résumé de toutes ces infos, mon <a onclick="smoothScroll(event)" class="button" href="#cv-C">CV</a> est à votre disposition.</p>
 </div>
 
 
@@ -173,20 +173,30 @@
 		<div>
 			<div class="flaticon-design"></div>
 			<h4>Graphisme</h4>
-			<p>Le graphisme est sûrement l'une de mes plus grandes passions, à égalité avec le développement. Je fais du graphisme depuis mes 10 ans, et je me suis déjà essayé à de nombreux domaines; créations (bannières), photomontage, retouche photo, dessin, ressources pour des projets, découpe, photos, tutoriels.</p>
+			<p>Le graphisme est sûrement l'une de mes plus grandes passions, à égalité avec le développement. Je fais du
+				graphisme depuis mes 10 ans, et je me suis déjà essayé à de nombreux domaines; créations (bannières),
+				photomontage, retouche photo, dessin, ressources pour des projets, découpe, photos, tutoriels.</p>
 			<p>Lors de chacun de mes projets, c'est moi qui me suis occupé des chartes graphiques, WebDesign, etc...</p>
-			<p>La majorité de ces créations sont disponibles sur mon compte <a onclick="smoothScroll(event)" class="button" data-goto="contact">DeviantArt</a></p>
+			<p>La majorité de ces créations sont disponibles sur mon compte <a onclick="smoothScroll(event)"
+																			   class="button"
+																			   href="#contact">DeviantArt</a></p>
 		</div>
 		<div>
 			<div class="flaticon-movie-clapper-open"></div>
 			<h4>Cinéma / Séries</h4>
-			<p>J'aime regarder des films ou des séries. Pouvoir suivre une personne ou un groupe de personnes au fil de leur aventure (voire plus pour les séries) me passionne. Je vis leurs péripéties avec eux, et j'éprouve de l'empathie pour eux. De plus, j'aime réfléchir au film après l'avoir regardé, comme par exemple les messages qu'il a voulu transmettre, ou les références qui y sont glissées.</p>
+			<p>J'aime regarder des films ou des séries. Pouvoir suivre une personne ou un groupe de personnes au fil de
+				leur aventure (voire plus pour les séries) me passionne. Je vis leurs péripéties avec eux, et j'éprouve
+				de l'empathie pour eux. De plus, j'aime réfléchir au film après l'avoir regardé, comme par exemple les
+				messages qu'il a voulu transmettre, ou les références qui y sont glissées.</p>
 		</div>
 		<div>
-			<div class="flaticon-books-stack"></div>
-			<h4>Lecture</h4>
-			<p>Je lis toute sorte de livres, allant des comics aux romans. J'aime le fait que l'on puisse suivre une histoire tout en pouvant laisser libre court à notre imagination.</p>
-			<p>J'aime beaucoup de styles, comme par exemple le fantastique (l'épouvanteur), le futuriste (black library) ou encore les comics (Marvel).</p>
+			<div class="flaticon-pacman"></div>
+			<h4>Jeux Vidéos</h4>
+			<p>Que ce soient des jeux d'action (Overwatch), de stratégie (Civilization), de carte (Hearthstone), ou de
+				rôle (The Elder Scrolls), j'aime m'évader le temps d'une partie dans les jeux vidéos. On y incarne des
+				protagonistes variés et avec une personalité forte.</p>
+			<p>Je m'interresse aussi à l'e-sport (Overwatch League), pratique qui grandit de plus en plus, et qui a le
+				pouvoir de rassembler les joueurs autour de leur équipe (ou joueur) favorite.</p>
 		</div>
 	</div>
 </div>
@@ -229,8 +239,10 @@
 <div id="contactContainer" class="container firstAndLastContainer">
 	<h2 id="contact">Contact</h2>
 	<div id="contactIconsContainer" class="flexContent">
-		<a href="files/CV_Justin_Mottier.pdf" target="_blank"><span id="cv-C"
-																	class="flaticon-cv-file-interface-symbol img-contact"></span></a>
+		<a href="files/CV_Justin_Mottier.jpg"
+		   download="CV_Justin_MOTTIER"
+		   target="_blank"><span id="cv-C"
+								 class="flaticon-cv-file-interface-symbol img-contact"></span></a>
 		<a href="mailto:justin.mottier@gmail.com"><span id="mail-C" class="flaticon-at img-contact"></span></a>
 		<a href="https://www.linkedin.com/in/justin-mottier-b55132172/" target="_blank"><span id="linkedin-C"
 																							  class="flaticon-linkedin-logo img-contact"></span></a>
@@ -240,10 +252,10 @@
 	</div>
 </div>
 <!--Formulaire-->
-<script src="script/stickyNav.js?v=3"></script>
-<script src="script/SmoothScroll.js?v=3"></script>
-<script src="script/updateContent.js?v=3"></script>
-<script src="script/TilesTab.js?v=3"></script>
+<script src="script/stickyNav.js?v=4"></script>
+<script src="script/SmoothScroll.js?v=4"></script>
+<script src="script/updateContent.js?v=4"></script>
+<script src="script/TilesTab.js?v=4"></script>
 <!--Script Pop-Up-->
 </body>
 

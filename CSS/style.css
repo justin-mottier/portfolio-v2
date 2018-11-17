@@ -382,11 +382,12 @@ header {
     width: 100px;
     margin: 0 auto;
     font-size: 100px;
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 #contactIconsContainer a {
     width: calc(100%/4);
+	cursor: auto;
 }
 
 .imgContainer {
@@ -425,11 +426,11 @@ header {
 }
 
 #cv-C:hover:before {
-    color: #a03434;
+    color: #ab2b2b;
 }
 
 #mail-C:hover:before {
-    color: #fcff3d;
+    color: #ffe500;
 }
 
 #contactIconsContainer {
@@ -445,10 +446,7 @@ header {
     transition-duration: 1s;
     transition-timing-function: ease-out;
     transition-delay: 0s;
-}
-
-.img-contact:hover {
-    text-shadow: -1px -1px #000, 1px 1px #000, -1px 1px #000, 1px -1px #000;
+	cursor: pointer;
 }
 
 #overlay {

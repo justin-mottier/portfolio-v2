@@ -6,10 +6,9 @@ async function smoothScroll(event) {
 	let source = window.pageYOffset;
 	let target;
 	if (event.target.tagName != 'A') {
-		console.log(event.target.parentElement.dataset.goto);
-		target = document.getElementById(event.target.parentElement.dataset.goto).offsetTop-80;
+		target = document.getElementById(event.target.parentElement.getAttribute("href").substring(1)).offsetTop-80;
 	} else {
-		target = document.getElementById(event.target.dataset.goto).offsetTop-80;
+		target = document.getElementById(event.target.getAttribute("href").substring(1)).offsetTop-80;
 	}
 	let msToWait = TIME/(Math.abs(source-target)/step);
 
@@ -24,6 +23,7 @@ async function smoothScroll(event) {
 			await sleep(msToWait);
 		}
 	}
+	event.preventDefault();
 }
 
 function sleep(ms) {
