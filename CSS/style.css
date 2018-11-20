@@ -47,7 +47,7 @@ h1 {
     text-align: center;
     font-size: 7em;
     font-family: 'Satisfy', cursive;
-    margin: 0;
+    margin: 0 auto;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -97,6 +97,7 @@ header {
     background: linear-gradient(135deg, rgba(254, 213, 136, 0.3), rgba(253, 120, 123, 0.3)), url(../img/background.svg), no-repeat;
     background-size: cover;
     position: relative;
+	box-sizing: border-box;
 }
 
 #currentDisplay {
@@ -238,7 +239,7 @@ header {
 .timeline::after {
     content: '';
     position: absolute;
-    width: 6px;
+    width: 6px;	
     top: 0;
     bottom: 0;
     left: 50%;
@@ -387,7 +388,6 @@ header {
 
 #contactIconsContainer a {
     width: calc(100%/4);
-	cursor: auto;
 }
 
 .imgContainer {
@@ -413,23 +413,22 @@ header {
 }
 
 #deviant-C::before {
-    padding-left: 24px;
-    margin-right: 36px;
+
 }
 
-#deviant-C:hover:before {
+#deviant-C:hover {
     color: #05CC47;
 }
 
-#linkedin-C:hover:before {
+#linkedin-C:hover {
     color: #0077B5;
 }
 
-#cv-C:hover:before {
+#cv-C:hover {
     color: #ab2b2b;
 }
 
-#mail-C:hover:before {
+#mail-C:hover {
     color: #ffe500;
 }
 
@@ -438,15 +437,14 @@ header {
     margin: auto;
 }
 
-.img-contact:before {
-    margin: 0 60px;
+.img-contact {
+    /*margin: 0 60px;*/
     font-size: 150px;
     color: var(--primary);
     transition-property: all;
     transition-duration: 1s;
     transition-timing-function: ease-out;
     transition-delay: 0s;
-	cursor: pointer;
 }
 
 #overlay {
@@ -524,10 +522,6 @@ header {
         width: calc(100%/3);
     }
 
-    #contactIconsContainer a {
-        width: calc(100%/2);
-    }
-
     #insideOverlay {
         display: grid;
     }
@@ -550,8 +544,13 @@ header {
         transform: translate(0, 50%);
     }
 
+	header {
+		padding: 50% 0;
+	}
+
     #top h2 {
         font-size: 2.55em;
+		margin: 0;
     }
 
     h1.sticky {
@@ -593,8 +592,8 @@ header {
     }
 
     #contactIconsContainer a {
-        width: calc(100%/1);
-        margin: 10px 0;
+		margin: 10px 0;
+		font-size: 100px;
     }
 
     #insideOverlay {
