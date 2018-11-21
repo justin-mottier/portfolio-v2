@@ -42,16 +42,6 @@ function show() {
 	document.getElementById('arrowPrev').addEventListener('click', clickArrowP);
 	document.getElementById('arrowNext').addEventListener('click', clickArrowN);
 	window.addEventListener("keydown", handleKey);
-}function createSpan(id, classe) {
-	let span = document.createElement('img');
-	if (id) {
-		span.id = id;
-	}
-	if (classe) {
-		span.className = classe;
-	}
-	span.src = src;
-	return span;
 }
 
 function clickArrowP() {
@@ -153,17 +143,23 @@ function handleKey(event) {
 function resize() {
 	let content = document.getElementById('currentDisplay');
 	let width, height;
+	let inside = document.getElementById('overlayContainer');
+	
 	content.onload = function () {
-		height = content.height;
-		width = content.width;
+		height = content.offsetHeight;
+		width = content.offsetWidth;
 		console.log(width + " " + height);
 		if (width > height) { //si paysage
 			content.style.maxWidth = '75vw';
 			content.style.height = 'auto';
-
+			
 		} else { //si portrait ou carré
 			content.style.maxHeight = '75vh';
 			content.style.width = 'auto';
+		}
+		if (window.innerWidth < 640) {
+			content.style.height = "350px";
+			inside.style.display = "block";
 		}
 	};
 }
