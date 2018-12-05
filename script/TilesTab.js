@@ -42,6 +42,7 @@ function show(elem) {
 	
 	document.getElementById('insideOverlay').innerHTML = createSpan('arrowPrev', 'arrow flaticon-back').outerHTML + div.outerHTML + createSpan('arrowNext', 'arrow flaticon-next').outerHTML;
 	resize();
+	overlay.style.display = 'block';
 	document.getElementById('arrowPrev').addEventListener('click', clickArrowP);
 	document.getElementById('arrowNext').addEventListener('click', clickArrowN);
 	window.addEventListener("keydown", handleKey);
@@ -49,12 +50,17 @@ function show(elem) {
 
 function showMini(elem) {
 	currentIndex = elem.index;
+	
 	let div = createDiv('overlayContainer', 'container overlayContent');
 	let texte = createDiv(null, 'sideText');
+	
 	texte.innerHTML = elem.alt + elem.dataset.content;
+	
 	div.innerHTML = createImg('currentDisplay', null, elem.dataset.full).outerHTML + texte.outerHTML;
+	
 	let arrowContainer = createDiv(null, "flexContent");
-	arrowContainer.innerHTML = createSpan('arrowPrev', 'arrow flaticon-back').outerHTML + createSpan('arrowNext', 'arrow flaticon-next').outerHTML
+	arrowContainer.innerHTML = createSpan('arrowPrev', 'arrow flaticon-back').outerHTML + createSpan('arrowNext', 'arrow flaticon-next').outerHTML;
+	
 	document.getElementById('insideOverlay').innerHTML = div.outerHTML + arrowContainer.outerHTML;
 	overlay.style.display = 'block';
 	resize();

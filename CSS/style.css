@@ -532,6 +532,8 @@ header {
 
 	.arrow {
 		margin: 0;
+		width: 50%;
+		text-align: center;
 	}
 
 	#hobbies > div {
@@ -606,8 +608,9 @@ header {
 
     #insideOverlay {
         display: grid;
-		max-width: 95vw;
-		max-height: 95vh;
+		width: 100%;
+		height: 100%;
+		background-color: var(--fond-sec);
     }
 
     #parcours {
