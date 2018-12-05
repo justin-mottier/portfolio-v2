@@ -1,7 +1,6 @@
 let currentIndex;
 let tiles = [];
 let overlay = document.getElementById('overlay');
-let cross = document.getElementById('cross');
 
 function closeOverlay(event) {
 	if (event.target === overlay || event.target === cross || event.target === document.getElementsByTagName('body')[0]) {
@@ -45,6 +44,7 @@ function show(elem) {
 	overlay.style.display = 'block';
 	document.getElementById('arrowPrev').addEventListener('click', clickArrowP);
 	document.getElementById('arrowNext').addEventListener('click', clickArrowN);
+	document.getElementById('cross').addEventListener('click', closeOverlay);
 	window.addEventListener("keydown", handleKey);
 }
 
@@ -67,6 +67,7 @@ function showMini(elem) {
 	resize();
 	document.getElementById('arrowPrev').addEventListener('click', clickArrowP);
 	document.getElementById('arrowNext').addEventListener('click', clickArrowN);
+	document.getElementById('cross').addEventListener('click', closeOverlay);
 	window.addEventListener("keydown", handleKey);
 }
 
@@ -145,13 +146,6 @@ function createP(id, classe, content) {
 	return p;
 }
 
-function setEvents() {
-	overlay.addEventListener('click', function (event) {
-		closeOverlay(event);
-	});
-	cross.addEventListener('click', closeOverlay);
-}
-
 function handleKey(event) {
 	if (isDisplayed()) {
 		if (event.code === 'ArrowLeft' || event.code === 'KeyA') {
@@ -192,7 +186,7 @@ function resize() {
 
 function main() {
 	fetchContent();
-	setEvents();
+	overlay.addEventListener('click', closeOverlay);
 }
 
 window.onload = main;
