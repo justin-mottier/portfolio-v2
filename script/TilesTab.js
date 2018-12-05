@@ -18,25 +18,44 @@ function fetchContent() {
 	for (let i = 0; i < tiles.length; i++) {
 		tiles[i].index = i;
 		tiles[i].type = tiles[i].dataset.type;
-		tiles[i].addEventListener('click', show);
+		tiles[i].addEventListener('click', showManager);
 	}
 }
 
-function show() {
-	currentIndex = this.index;
-	let div = createDiv('overlayContainer', 'container overlayContent');
-	if (this.dataset.type === 'img') {
-		div.innerHTML = createImg('currentDisplay', null, this.dataset.full).outerHTML + createP(null, null, this.alt).outerHTML;
-	} else if (this.dataset.type === 'project') {
-		div.style.display = "inline-flex";
-		let texte = createDiv(null, 'sideText');
-		texte.innerHTML = this.alt + this.dataset.content;
-		div.innerHTML = createImg('currentDisplay', null, this.dataset.full).outerHTML + texte.outerHTML;
-		console.log(this);
-	} else if (this.dataset.type === 'video') {
-		div.innerHTML = createIFrame('currentDisplay', null, this.dataset.full).outerHTML;
+function showManager() {
+	if (window.innerWidth < 1080) {
+		showMini(this);
+	} else {
+		show(this);
 	}
+}
+
+function show(elem) {
+	currentIndex = elem.index;
+	
+	let div = createDiv('overlayContainer', 'container overlayContent');
+	let texte = createDiv(null, 'sideText');
+	
+	texte.innerHTML = elem.alt + elem.dataset.content;
+	
+	div.innerHTML = createImg('currentDisplay', null, elem.dataset.full).outerHTML + texte.outerHTML;
+	
 	document.getElementById('insideOverlay').innerHTML = createSpan('arrowPrev', 'arrow flaticon-back').outerHTML + div.outerHTML + createSpan('arrowNext', 'arrow flaticon-next').outerHTML;
+	resize();
+	document.getElementById('arrowPrev').addEventListener('click', clickArrowP);
+	document.getElementById('arrowNext').addEventListener('click', clickArrowN);
+	window.addEventListener("keydown", handleKey);
+}
+
+function showMini(elem) {
+	currentIndex = elem.index;
+	let div = createDiv('overlayContainer', 'container overlayContent');
+	let texte = createDiv(null, 'sideText');
+	texte.innerHTML = elem.alt + elem.dataset.content;
+	div.innerHTML = createImg('currentDisplay', null, elem.dataset.full).outerHTML + texte.outerHTML;
+	let arrowContainer = createDiv(null, "flexContent");
+	arrowContainer.innerHTML = createSpan('arrowPrev', 'arrow flaticon-back').outerHTML + createSpan('arrowNext', 'arrow flaticon-next').outerHTML
+	document.getElementById('insideOverlay').innerHTML = div.outerHTML + arrowContainer.outerHTML;
 	overlay.style.display = 'block';
 	resize();
 	document.getElementById('arrowPrev').addEventListener('click', clickArrowP);
@@ -108,7 +127,7 @@ function createIFrame(id, classe, src) {
 }
 
 function createP(id, classe, content) {
-	let p  = document.createElement('p');
+	let p = document.createElement('p');
 	if (id) {
 		p.id = id;
 	}
@@ -168,4 +187,5 @@ function main() {
 	fetchContent();
 	setEvents();
 }
+
 window.onload = main;

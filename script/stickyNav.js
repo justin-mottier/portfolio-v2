@@ -14,7 +14,7 @@ const STEP = GAP / 50; //un pas = l'écart divisé par (7em-2em)/0.1em
 
 
 function classManager() {
-	if (!(screen.width < 1080)) {
+	if (!(window.innerWidth < 1080)) {
 			resizeTXT(); //à chaque scroll on redimensionne la taille de TXT
 			if (!TXT.classList.contains("sticky") && TXT_TOP <= window.pageYOffset) { //si TXT n'est pas sur la NAVBAR et que le bord de TXT n'est pas au bord du viewport
 				TXT.classList.add("anchor");
