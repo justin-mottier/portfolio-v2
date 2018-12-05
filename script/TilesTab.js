@@ -40,7 +40,7 @@ function show(elem) {
 	
 	div.innerHTML = createImg('currentDisplay', null, elem.dataset.full).outerHTML + texte.outerHTML;
 	
-	document.getElementById('insideOverlay').innerHTML = createSpan('arrowPrev', 'arrow flaticon-back').outerHTML + div.outerHTML + createSpan('arrowNext', 'arrow flaticon-next').outerHTML;
+	document.getElementById('insideOverlay').innerHTML = createSpan('arrowPrev', 'arrow flaticon-back').outerHTML + div.outerHTML + createSpan('arrowNext', 'arrow flaticon-next').outerHTML + createSpan('cross', 'flaticon-cancel').outerHTML;
 	resize();
 	overlay.style.display = 'block';
 	document.getElementById('arrowPrev').addEventListener('click', clickArrowP);
@@ -49,6 +49,7 @@ function show(elem) {
 }
 
 function showMini(elem) {
+	console.log("mini");
 	currentIndex = elem.index;
 	
 	let div = createDiv('overlayContainer', 'container overlayContent');
@@ -59,7 +60,7 @@ function showMini(elem) {
 	div.innerHTML = createImg('currentDisplay', null, elem.dataset.full).outerHTML + texte.outerHTML;
 	
 	let arrowContainer = createDiv(null, "flexContent");
-	arrowContainer.innerHTML = createSpan('arrowPrev', 'arrow flaticon-back').outerHTML + createSpan('arrowNext', 'arrow flaticon-next').outerHTML;
+	arrowContainer.innerHTML = createSpan('arrowPrev', 'arrow flaticon-back').outerHTML + createSpan('cross', 'flaticon-cancel').outerHTML + createSpan('arrowNext', 'arrow flaticon-next').outerHTML;
 	
 	document.getElementById('insideOverlay').innerHTML = div.outerHTML + arrowContainer.outerHTML;
 	overlay.style.display = 'block';

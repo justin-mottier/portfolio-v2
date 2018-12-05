@@ -545,6 +545,9 @@ header {
 	.right {
 		padding: 10px 0 0px 40px;
 	}
+	.img-contact {
+		font-size: 100px;
+	}
 }
 
 @media screen and (max-width: 639px) {
@@ -601,9 +604,9 @@ header {
         z-index: 1000;
     }
 
-    #contactIconsContainer a {
+    .img-contact {
 		margin: 10px 0;
-		font-size: 100px;
+		font-size: 75px;
     }
 
     #insideOverlay {
