@@ -8,10 +8,6 @@ function closeOverlay(event) {
 	}
 }
 
-function isDisplayed() {
-	return overlay.style.display === "block";
-}
-
 function fetchContent() {
 	tiles = document.getElementsByClassName('img-galerie');
 	for (let i = 0; i < tiles.length; i++) {
@@ -49,7 +45,6 @@ function show(elem) {
 }
 
 function showMini(elem) {
-	console.log("mini");
 	currentIndex = elem.index;
 	
 	let div = createDiv('overlayContainer', 'container overlayContent');
@@ -64,7 +59,7 @@ function showMini(elem) {
 	
 	document.getElementById('insideOverlay').innerHTML = div.outerHTML + arrowContainer.outerHTML;
 	overlay.style.display = 'block';
-	resize();
+	resizeMini();
 	document.getElementById('arrowPrev').addEventListener('click', clickArrowP);
 	document.getElementById('arrowNext').addEventListener('click', clickArrowN);
 	document.getElementById('cross').addEventListener('click', closeOverlay);
@@ -147,7 +142,7 @@ function createP(id, classe, content) {
 }
 
 function handleKey(event) {
-	if (isDisplayed()) {
+	if (overlay.style.display === "block") {
 		if (event.code === 'ArrowLeft' || event.code === 'KeyA') {
 			clickArrowP();
 		}
@@ -181,6 +176,16 @@ function resize() {
 			content.style.height = "350px";
 			inside.style.display = "block";
 		}
+	};
+}
+
+function resizeMini() {
+	let content = document.getElementById('currentDisplay');
+	let width, height;
+	
+	content.onload = function () {
+			content.style.width = '100%';
+			content.style.height = 'auto';
 	};
 }
 

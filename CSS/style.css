@@ -387,7 +387,7 @@ header {
 }
 
 #contactIconsContainer a {
-	width: calc(100% / 4);
+	width: calc(100% / 5);
 }
 
 .imgContainer {
@@ -429,6 +429,10 @@ header {
 
 #mail-C:hover {
 	color: #ffe500;
+}
+
+#git-C:hover {
+	color: #fff;
 }
 
 #contactIconsContainer {
@@ -473,9 +477,7 @@ header {
 	width: -webkit-fit-content;
 	width: -moz-fit-content;
 	width: fit-content;
-	height: -webkit-fit-content;
-	height: -moz-fit-content;
-	height: fit-content;
+	height: 100%;
 	padding: 20px;
 	margin: 0 auto;
 }
@@ -621,7 +623,7 @@ header {
 	#cross {
 		margin: auto;
 		padding: 0;
-		font-size: 75px;
+		font-size: 45px;
 		position: static;
 	}
 
@@ -662,6 +664,12 @@ header {
 
 	#hobbies > div {
 		width: 100%;
+	}
+	#overlayContainer {
+		padding: 20px 20px 0 20px;
+	}
+	.arrow {
+		font-size: 50px;
 	}
 }
 
