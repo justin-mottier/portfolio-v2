@@ -56,7 +56,11 @@ function showMini(elem) {
 	
 	texte.innerHTML = elem.alt + elem.dataset.content;
 	
-	div.innerHTML = createImg('currentDisplay', null, elem.dataset.full).outerHTML + texte.outerHTML;
+	if (elem.dataset.type === "img") {
+		div.innerHTML = createImg('currentDisplay', null, elem.dataset.full).outerHTML + texte.outerHTML;
+	} else if (elem.dataset.type === "video") {
+		div.innerHTML = createVideo('currentDisplay', null, elem.dataset.full).outerHTML + texte.outerHTML;
+	}
 	
 	let arrowContainer = createDiv(null, "flexContent");
 	arrowContainer.innerHTML = createSpan('arrowPrev', 'arrow flaticon-back').outerHTML + createSpan('cross', 'flaticon-cancel').outerHTML + createSpan('arrowNext', 'arrow flaticon-next').outerHTML;
@@ -161,7 +165,6 @@ function resize() {
 	content.onload = function () {
 		height = content.offsetHeight;
 		width = content.offsetWidth;
-		console.log(width + " " + height);
 		if (width > height) { //si paysage
 			content.style.maxWidth = '75vw';
 			content.style.height = 'auto';
@@ -179,12 +182,8 @@ function resize() {
 
 function resizeMini() {
 	let content = document.getElementById('currentDisplay');
-	let width, height;
-	
-	content.onload = function () {
-			content.style.width = '100%';
-			content.style.height = 'auto';
-	};
+	content.style.width = '100%';
+	content.style.height = 'auto';
 }
 
 function main() {
