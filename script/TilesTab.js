@@ -32,10 +32,14 @@ function show(elem) {
 	let texte = createDiv(null, 'sideText');
 	
 	texte.innerHTML = elem.alt + elem.dataset.content;
-	
-	div.innerHTML = createImg('currentDisplay', null, elem.dataset.full).outerHTML + texte.outerHTML;
+	if (elem.dataset.type === "img") {
+		div.innerHTML = createImg('currentDisplay', null, elem.dataset.full).outerHTML + texte.outerHTML;
+	} else if (elem.dataset.type === "video") {
+		div.innerHTML = createVideo('currentDisplay', null, elem.dataset.full).outerHTML + texte.outerHTML;
+	}
 	
 	document.getElementById('insideOverlay').innerHTML = createSpan('arrowPrev', 'arrow flaticon-back').outerHTML + div.outerHTML + createSpan('arrowNext', 'arrow flaticon-next').outerHTML + createSpan('cross', 'flaticon-cancel').outerHTML;
+	
 	resize();
 	overlay.style.display = 'block';
 	document.getElementById('arrowPrev').addEventListener('click', clickArrowP);
@@ -116,29 +120,23 @@ function createSpan(id, classe) {
 	return span;
 }
 
-function createIFrame(id, classe, src) {
-	let frame = document.createElement('iFrame');
+function createVideo(id, classe, src) {
+	let vid = document.createElement('video');
+	vid.autoplay = true;
+	vid.loop = true;
+	vid.muted = true;
+	vid.playsinline = true;
 	if (id) {
-		frame.id = id;
+		vid.id = id;
 	}
 	if (classe) {
-		frame.className = classe;
+		vid.className = classe;
 	}
-	frame.src = src;
-	frame.frameborder = "0";
-	return frame;
-}
-
-function createP(id, classe, content) {
-	let p = document.createElement('p');
-	if (id) {
-		p.id = id;
-	}
-	if (classe) {
-		p.class = classe;
-	}
-	p.innerHTML = content;
-	return p;
+	let source = document.createElement('source');
+	source.src = src;
+	source.type = "video/mp4";
+	vid.innerHTML = source.outerHTML;
+	return vid;
 }
 
 function handleKey(event) {
