@@ -391,7 +391,7 @@ header {
 }
 
 .imgContainer {
-	width: calc(100% / 4);
+	width: calc(100% / 5);
 }
 
 #cross {

@@ -137,9 +137,13 @@ function createVideo(id, classe, src) {
 		vid.className = classe;
 	}
 	let source = document.createElement('source');
-	source.src = src;
+	source.src = src+".mp4";
 	source.type = "video/mp4";
-	vid.innerHTML = source.outerHTML;
+	
+	let source2 = document.createElement('source');
+	source2.src = src+".webm";
+	source2.type = "video/webm";
+	vid.innerHTML = source.outerHTML + source2.outerHTML;
 	return vid;
 }
 
